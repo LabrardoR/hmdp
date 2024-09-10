@@ -1,7 +1,11 @@
 package com.hmdp.utils;
 
 import com.hmdp.dto.UserDTO;
+import com.hmdp.entity.User;
 
+/**
+ * 封装了user的ThreadLocal
+ */
 public class UserHolder {
     private static final ThreadLocal<UserDTO> tl = new ThreadLocal<>();
 
