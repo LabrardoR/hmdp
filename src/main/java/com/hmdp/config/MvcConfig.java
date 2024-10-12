@@ -27,7 +27,12 @@ public class MvcConfig implements WebMvcConfigurer {
                         "/shop-type/**",
                         "/blog/hot",
                         "/user/code",
-                        "/user/login"
+                        "/user/login",
+                        "/doc.html",             // 排除接口文档
+                        "/webjars/**",            // 排除文档相关静态资源
+                        "/swagger-resources/**",  // 排除Swagger相关的资源
+                        "/v3/api-docs",           // 排除API文档
+                        "/favicon.ico"            // 排除图标资源
                 ).order(1);
         registry.addInterceptor(new RefreshTokenInterceptor(stringRedisTemplate)).addPathPatterns("/**").order(0);
 

@@ -24,3 +24,20 @@ mybatis-plus:
 logging:
   level:
     com.hmdp: debug
+
+knife4j:
+  enable: true
+  openapi:
+    title: 黑马点评接口文档
+    description: 接口文档
+    email: iamhead@163.com
+    concat: 林尚达
+    url:
+    version: v1.0
+    license: Apache 2.0
+    group:
+      test1:
+        group-name: head
+        api-rule: package
+        api-rule-resources:
+          - com.hmdp.controller
