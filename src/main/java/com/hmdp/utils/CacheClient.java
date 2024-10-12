@@ -111,6 +111,8 @@ public class CacheClient {
         }
         // 命中 -> 过期与否都先把数据返回
         RedisData redisData = new RedisData();
+        redisData = JSONUtil.toBean(json,RedisData.class);
+        System.out.println(redisData.getData());
         JSONObject data = (JSONObject) redisData.getData();
         R r = JSONUtil.toBean(data, type);
         LocalDateTime expireTime = redisData.getExpireTime();
